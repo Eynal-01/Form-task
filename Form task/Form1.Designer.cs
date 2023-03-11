@@ -111,7 +111,6 @@
             this.AgeLbl.Size = new System.Drawing.Size(33, 19);
             this.AgeLbl.TabIndex = 8;
             this.AgeLbl.Text = "Age";
-            this.AgeLbl.Click += new System.EventHandler(this.AgeLbl_Click);
             // 
             // dateTimePicker
             // 
@@ -190,7 +189,6 @@
             this.FormLbl.Size = new System.Drawing.Size(143, 67);
             this.FormLbl.TabIndex = 18;
             this.FormLbl.Text = "Form";
-            this.FormLbl.Click += new System.EventHandler(this.FormLbl_Click);
             // 
             // LoginBtn
             // 
@@ -221,6 +219,7 @@
             // emailcheck
             // 
             this.emailcheck.AutoSize = true;
+            this.emailcheck.BackColor = System.Drawing.Color.Transparent;
             this.emailcheck.Location = new System.Drawing.Point(337, 192);
             this.emailcheck.Name = "emailcheck";
             this.emailcheck.Size = new System.Drawing.Size(0, 16);
@@ -262,7 +261,6 @@
             this.agechecklbl.Name = "agechecklbl";
             this.agechecklbl.Size = new System.Drawing.Size(0, 16);
             this.agechecklbl.TabIndex = 21;
-            this.agechecklbl.Click += new System.EventHandler(this.label2_Click);
             // 
             // Name
             // 
@@ -294,7 +292,6 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Name";
             this.Text = "Name";
-            this.Load += new System.EventHandler(this.Name_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,21 +15,6 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.ProgressBar;
 
 namespace Form_task
 {
-    public class FileHelper
-    {
-        public static void WriteJsonHuman(Human human)
-        {
-            var serializer = new JsonSerializer();
-            using (var sw = new StreamWriter($"{human.Name}.json"))
-            {
-                using (var jw = new JsonTextWriter(sw))
-                {
-                    jw.Formatting = Newtonsoft.Json.Formatting.Indented;
-                    serializer.Serialize(jw, human);
-                }
-            }
-        }
-    }
     public partial class Name : Form
     {
         public Name()
@@ -39,9 +24,9 @@ namespace Form_task
         protected override void OnPaintBackground(PaintEventArgs e)
         {
             using (LinearGradientBrush brush = new LinearGradientBrush(this.ClientRectangle,
-                                                                  Color.LightBlue,
-                                                                  Color.Pink,
-                                                                  90F))
+                                                                  Color.SpringGreen,
+                                                                  Color.Orange,
+                                                                  45F))
             {
                 e.Graphics.FillRectangle(brush, this.ClientRectangle);
             }
@@ -79,18 +64,7 @@ namespace Form_task
                 this.BackColor = Color.Red;
             }
         }
-        private void FormLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void AgeLbl_Click(object sender, EventArgs e)
-        {
-
-        }
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
+        
         private void EmailtextBox_TextChanged(object sender, EventArgs e)
         {
             if (!EmailtextBox.Text.Contains("@gmail.com"))
@@ -130,18 +104,5 @@ namespace Form_task
                 Check = true;
             }
         }
-        private void Name_Load(object sender, EventArgs e)
-        {
-
-        }
-    }
-    public class Human
-    {
-        public string Name { get; set; }
-        public string Surname { get; set; }
-        public int Age { get; set; }
-        public string BirthDate { get; set; }
-        public string Gender { get; set; }
-        public string Email { get; set; }
     }
 }
